@@ -19,11 +19,10 @@ Step 4 : ``` npx hardhat run --network sepolia scripts/deploy.js ``` For deployi
 Step 5 : ``` npm run dev ```  This is for running in the browser
 
 # Key Points 
-
-### 1. Don't forgot to change your private key.
-### 2. Store all of your private keys and other private stuff in the ```.env``` file in the root directory.
-### 3. You can change or add the networks in the hardhat.config.js.
-### 4. Metamask should be there in your browser for the interaction with your wallet.
+1. Don't forgot to change your private key.
+2. Store all of your private keys and other private stuff in the ```.env``` file in the root directory.
+3. You can change or add the networks in the hardhat.config.js.
+4. Metamask should be there in your browser for the interaction with your wallet.
 
 # Interacting with the code in the Frontend
 
@@ -33,4 +32,11 @@ Step 5 : ``` npm run dev ```  This is for running in the browser
 4. Next we also have a approve & deposit button which will approve our nft and deposit them.
 5. And at last we have a Get_balance button it will get the balance of the wallet address which you will provide.
 
+## Authors
+
+Ayush Kathayat.
+
+## License
+
+This project is licensed under the MIT License.
    
