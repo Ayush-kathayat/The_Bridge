@@ -1,0 +1,108 @@
+
+
+
+.title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #fff;
+    text-shadow: 0 0 50px white;
+    font-family: Poppins, sans-serif;
+    letter-spacing: 1rem; 
+}
+
+.nft-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nft-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 550px;
+    border : solid 5px #fff;
+    border-radius: 5px;
+    background-color: #000;
+    margin-bottom : 15%;
+}
+
+.nft-image{
+    height: 500px;
+    width: 500px;
+}
+
+.nft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem 0;
+    margin-top : 5%;
+}
+
+.get-prompt-btn{
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+/* utility classes */
+
+
+.invisible{
+    display: none;
+}
+
+.prompt_para{
+    width: 600px;
+}
+
+
+.action-btn{
+    display : flex;
+    justify-content: space-evenly;
+    margin : 10%;
+}
+
+
+.mint-btn , .bridge-btn , .get-balance-btn{
+    font-size : 2rem;
+    font-weight: bolder;  
+    cursor: pointer;
+}
+
+.balance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bal-para{
+    word-wrap: break-word;
+    max-width: 890px; /* Adjust the value as needed */
+}
+
+
+
+.footer{
+    height: 100px;
+    background-color: black;
+    font-size: 2rem;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-top : 5%;
+    word-spacing: 15px; /* Adjust the value as needed */
+
+}
+
+.footer > span{
+    color : red;
+    padding : 2%;
+}
