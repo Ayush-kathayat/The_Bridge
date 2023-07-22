@@ -1,42 +1,55 @@
 # The Bridge
-In this project I have first Batch Minted 5 NFT's  and then deployed it to the Sepolia testnet and after this i have simply bridged it over to the Polygon chain by using FXPortal bridge.
-For the NFT images I have used the DALLE and stored the imaged in the IPFS (Inter planetary file System) through Pinata.
-And I have also stored the NFT Metadata in the IPFS.
-I am using React for the frontend here. 
 
+In this project, I first minted 5 NFTs using Batch Minting and then deployed them to the Sepolia testnet. After this, I bridged them over to the Polygon chain using the FXPortal bridge. For the NFT images, I used DALL-E and stored the images in the IPFS (Interplanetary File System) through Pinata. Additionally, I stored the NFT Metadata in IPFS. The frontend of the project is built using React.
 
-# Executing The Program
-Download the code by downloading the entire repository which will give you access to other contents of the repository. Navigate to the root directory, run:
+## Executing The Program
 
-Step 1 : ``` npm i ``` For installing the necessary dependencies.
+To run the project, follow these steps:
 
-Step 2 : ``` npx hardhat node ```
+Step 1: Install the necessary dependencies by running:
+```
+npm i
+```
 
-Step 3 : ``` npx hardhat compile  ```  For compiling the solidity file
+Step 2: Start a local development node by running:
+```
+npx hardhat node
+```
 
-Step 4 : ``` npx hardhat run --network sepolia scripts/deploy.js ``` For deploying the contract to the testnet
+Step 3: Compile the Solidity smart contract by running:
+```
+npx hardhat compile
+```
 
-Step 5 : ``` npm run dev ```  This is for running in the browser
+Step 4: Deploy the contract to the Sepolia testnet by running:
+```
+npx hardhat run --network sepolia scripts/deploy.js
+```
 
-# Key Points 
-1. Don't forgot to change your private key.
-2. Store all of your private keys and other private stuff in the ```.env``` file in the root directory.
-3. You can change or add the networks in the hardhat.config.js.
-4. Metamask should be there in your browser for the interaction with your wallet.
+Step 5: Run the React frontend in the browser with the command:
+```
+npm run dev
+```
 
-# Interacting with the code in the Frontend
+## Key Points
 
-1. For getting the Prompt for the NFT there is a button below each NFT on clicking that button it will show you the prompt for that specific NFT.
-2. There are three more Buttons ```BATCH MINT``` , ```APPROVE & DEPOSIT ``` and ``` GET_BALANCE ``` .
-3. So for the batch minting the NFT we have a button Batch mint it will batch mint our 5 NFTs.
-4. Next we also have a approve & deposit button which will approve our nft and deposit them.
-5. And at last we have a Get_balance button it will get the balance of the wallet address which you will provide.
+1. Ensure to change your private key.
+2. Store all private keys and other sensitive information in the `.env` file in the root directory.
+3. You can modify or add networks in the `hardhat.config.js` file.
+4. Metamask should be installed in your browser for wallet interaction.
+
+## Interacting with the Code in the Frontend
+
+1. To view the prompt for an NFT, click the button below each NFT to display the prompt for that specific NFT.
+2. There are three more buttons: `BATCH MINT`, `APPROVE & DEPOSIT`, and `GET_BALANCE`.
+3. Clicking the `BATCH MINT` button will mint the 5 NFTs in batches.
+4. The `APPROVE & DEPOSIT` button will approve and deposit the NFTs.
+5. Lastly, the `GET_BALANCE` button will fetch the balance of the provided wallet address.
 
 ## Authors
 
-Ayush Kathayat.
+This project was created by Ayush Kathayat.
 
 ## License
 
 This project is licensed under the MIT License.
-   
