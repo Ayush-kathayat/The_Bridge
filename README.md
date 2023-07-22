@@ -7,5 +7,5 @@ And I have also stored the NFT Metadata in the IPFS.
 ## Executing The Program
 Download the code by downloading the entire repository which will give you access to other contents of the repository. Navigate to the root directory, run:
 
-{``` npm i ```}
+Step 1 : ``` npm i ```
 
