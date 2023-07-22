@@ -21,8 +21,16 @@ Step 5 : ``` npm run dev ```  This is for running in the browser
 # Key Points 
 
 ### 1. Don't forgot to change your private key.
-### 2. Store all of your private keys and other private stuff in the ```.env``` in the root directory.
+### 2. Store all of your private keys and other private stuff in the ```.env``` file in the root directory.
 ### 3. You can change or add the networks in the hardhat.config.js.
 ### 4. Metamask should be there in your browser for the interaction with your wallet.
 
 # Interacting with the code in the Frontend
+
+1. For getting the Prompt for the NFT there is a button below each NFT on clicking that button it will show you the prompt for that specific NFT.
+2. There are three more Buttons ```BATCH MINT``` , ```APPROVE & DEPOSIT ``` and ``` GET_BALANCE ``` .
+3. So for the batch minting the NFT we have a button Batch mint it will batch mint our 5 NFTs.
+4. Next we also have a approve & deposit button which will approve our nft and deposit them.
+5. And at last we have a Get_balance button it will get the balance of the wallet address which you will provide.
+
+   
