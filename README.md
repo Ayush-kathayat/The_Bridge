@@ -20,7 +20,7 @@ Step 5 : ``` npm run dev ```  This is for running in the browser
 
 ## Key Points 
 
-# 1. Don't forgot to change your private key.
+### 1. Don't forgot to change your private key.
 # 2. Store all of your private keys and other private stuff in the ```.env``` in the root directory.
 # 3. You can change or add the networks in the hardhat.config.js.
 # 4. Metamask should be there in your browser for the interaction with your wallet.
