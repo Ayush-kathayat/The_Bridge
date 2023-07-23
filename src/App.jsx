@@ -8,7 +8,7 @@ import Bridge from "../artifacts/contracts/Bridge.sol/Bridge.json";
 import FXRootContractAbi from "../artifacts/FXRootContractAbi.js";
 
 
-const contractAddress = "0xE7093B6B3c7161Fc7536548c8D4E184d5a4FC2F5"; // Replace with your contract's address
+const contractAddress = "0x010FdAcA0f2fa9afdC113c9F44b169BB57Eb72e4"; // Replace with your contract's address
 
 // Connect to an Ethereum provider
 const provider = new ethers.providers.Web3Provider(window.ethereum); // Replace with your Ethereum provider URL
@@ -20,7 +20,7 @@ const contract = new ethers.Contract(contractAddress, Bridge.abi, signer);
 
 
 // wallet instance below
-const privateKey = "4e57ba9be1bd7cef459afcade5c49c31e9f66a924a95be0148f8e55038fe498e";
+const privateKey = "env.process.PRIVATE_KEY";
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // below is the instance of the FXRoot contract
