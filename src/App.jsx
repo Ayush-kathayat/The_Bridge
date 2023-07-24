@@ -8,7 +8,7 @@ import Bridge from "../artifacts/contracts/Bridge.sol/Bridge.json";
 import FXRootContractAbi from "../artifacts/FXRootContractAbi.js";
 
 
-const contractAddress = "0x010FdAcA0f2fa9afdC113c9F44b169BB57Eb72e4"; // Replace with your contract's address
+const contractAddress = "0x145951Ff1Fc338c03A9319d5fd8eEf11C28D6A74"; // Replace with your contract's address
 
 // Connect to an Ethereum provider
 const provider = new ethers.providers.Web3Provider(window.ethereum); // Replace with your Ethereum provider URL
@@ -20,7 +20,7 @@ const contract = new ethers.Contract(contractAddress, Bridge.abi, signer);
 
 
 // wallet instance below
-const privateKey = "env.process.PRIVATE_KEY";
+const privateKey = env.process.PRIVATE_KEY;
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // below is the instance of the FXRoot contract
@@ -35,7 +35,7 @@ function App() {
   const [isApprovedAndDeposited, setIsApprovedAndDeposited] = useState(false);
   const [contractBalance, setContractBalance] = useState("LOADING ....");
   const [fxRoot, setFxRoot] = useState(null);
-  const [dontKnowWhatToName , setDontKnowWhatToName] = useState(false);
+  const [flag, setFlag] = useState(false);
 
 
 
@@ -149,16 +149,26 @@ function App() {
       console.log("Approved and deposited"); // confirmation in the console
       setIsApprovedAndDeposited(true);
 
-      // Fetch contract balance after FXRoot contract is fetched successfully
-      const balance = await contract.balanceOf(wallet.address);
-      setContractBalance(parseInt(balance.toString(), 10));
+
     } catch (err) {
       console.error("Error while approving and depositing NFTs:", err);
     }
   };
 
-  const getbal = () => {
-    setDontKnowWhatToName(true);
+  const getbal = async () => {
+
+    const token_address = "0x4260Ac9A371A6c7b05508E5209a76945eE9907c0";     //  the address which i got from polygonscan
+
+    // so i already have my wallet and abi above now i just need to get the instance of the contract through the above token_address
+
+    const token = new ethers.Contract(token_address, Bridge.abi, signer);
+
+
+    // Fetch contract balance after FXRoot contract is fetched successfully
+    const balance = await token.balanceOf(wallet.address);
+    setContractBalance(parseInt(balance.toString(), 10));
+
+    setFlag(true);
   };
 
 
@@ -275,13 +285,13 @@ function App() {
         </div>
         <div className="convert-tokens">
           <button className="bridge-btn" onClick={approveAndDepositNFT}>BRIDGE OVER TO POLYGON</button>
-          {isApprovedAndDeposited && <h1> APPROVED AND DEPOSIT</h1>}
+          {isApprovedAndDeposited && <h1> APPROVED AND DEPOSITED</h1>}
         </div>
       </div>
 
       <div className="balance">
         <button className="get-balance-btn" onClick={getbal}>GET BALANCE</button>
-        { dontKnowWhatToName && (<h1 className="bal-para"> The Balance of the Bridge Contract {wallet.address} is: {contractBalance}</h1>
+        { flag && (<h1 className="bal-para"> The Balance of the Bridge Contract {wallet.address} is: {contractBalance}</h1>
         )}
       </div>
       <footer className="footer"> Made with love<span>❤️</span> by Ayush Kathayat</footer>
