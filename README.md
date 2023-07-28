@@ -1,6 +1,6 @@
 # The Bridge
 
-In this project, I first minted 5 NFTs using Batch Minting and then deployed them to the Sepolia testnet. After this, I bridged them over to the Polygon chain using the FXPortal bridge. For the NFT images, I used DALL-E and stored the images in the IPFS (Interplanetary File System) through Pinata. Additionally, I stored the NFT Metadata in IPFS. The frontend of the project is built using React.
+In this project, I first minted 5 NFTs using Batch Minting and then deployed them to the Goerli testnet. After this, I bridged them over to the Polygon chain using the FXPortal bridge. For the NFT images, I used DALL-E and stored the images in the IPFS (Interplanetary File System) through Pinata. Additionally, I stored the NFT Metadata in IPFS. The frontend of the project is built using React.
 
 ## Executing The Program
 
@@ -21,9 +21,9 @@ Step 3: Compile the Solidity smart contract by running:
 npx hardhat compile
 ```
 
-Step 4: Deploy the contract to the Sepolia testnet by running:
+Step 4: Deploy the contract to the Goerli testnet by running:
 ```
-npx hardhat run --network sepolia scripts/deploy.js
+npx hardhat run --network goerli scripts/deploy.js
 ```
 
 Step 5: Run the React frontend in the browser with the command:
