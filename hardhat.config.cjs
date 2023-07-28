@@ -6,15 +6,15 @@ module.exports = {
   networks: {
     sepolia: {
       url: process.env.ALCHEMY_API_KEY, // Replace with the actual Sepolia testnet RPC URL
-      accounts: [process.env.PRIVATE_KEY], // Replace with an array of your account private keys for testing
+      accounts: [process.env.PR_KEY], // Replace with an array of your account private keys for testing
     },
     mumbai : {
       url : 'https://rpc-mumbai.maticvigil.com',
-      accounts : [process.env.PRIVATE_KEY],
+      accounts : [process.env.PR_KEY],
     },
     goerli : {
       url : process.env.ALCHEMY_API_KEY_GOERLI,
-      accounts : [process.env.PRIVATE_KEY],
+      accounts : [process.env.PR_KEY],
 
     },
   },

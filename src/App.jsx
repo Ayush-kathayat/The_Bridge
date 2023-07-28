@@ -1,5 +1,3 @@
-// import dotenv from 'dotenv'
-// dotenv.config()
 
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
@@ -8,7 +6,7 @@ import Bridge from "../artifacts/contracts/Bridge.sol/Bridge.json";
 import FXRootContractAbi from "../artifacts/FXRootContractAbi.js";
 
 
-const contractAddress = "0x145951Ff1Fc338c03A9319d5fd8eEf11C28D6A74"; // Replace with your contract's address
+const contractAddress = "0xE14de4b611Fb03Aa8b30C0A774fe1aF62AEA7448"; // Replace with your contract's address
 
 // Connect to an Ethereum provider
 const provider = new ethers.providers.Web3Provider(window.ethereum); // Replace with your Ethereum provider URL
@@ -20,7 +18,7 @@ const contract = new ethers.Contract(contractAddress, Bridge.abi, signer);
 
 
 // wallet instance below
-const privateKey = env.process.PRIVATE_KEY;
+const privateKey = import.meta.env.VITE_PRIVATE_KEY;
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // below is the instance of the FXRoot contract
@@ -30,12 +28,13 @@ function App() {
   const [url, setUrl] = useState("");
   const [nftData, setNftData] = useState([]);
   const [divIndex, setDivIndex] = useState(undefined);
-  const [promptContent, setPromptContent] = useState(``);
+  const [promptContent, setPromptContent] = useState("");
   const [isMinted, setIsMinted] = useState(false);
   const [isApprovedAndDeposited, setIsApprovedAndDeposited] = useState(false);
   const [contractBalance, setContractBalance] = useState("LOADING ....");
   const [fxRoot, setFxRoot] = useState(null);
   const [flag, setFlag] = useState(false);
+
 
 
 
