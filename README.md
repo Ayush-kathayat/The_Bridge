@@ -21,7 +21,7 @@ Step 3: Compile the Solidity smart contract by running:
 npx hardhat compile
 ```
 
-Step 4: Deploy the contract to the Goerli testnet by running:
+Step 4: Deploy the script to the Goerli testnet by running:
 ```
 npx hardhat run --network goerli scripts/deploy.js
 ```
@@ -29,6 +29,18 @@ npx hardhat run --network goerli scripts/deploy.js
 Step 5: Run the React frontend in the browser with the command:
 ```
 npm run dev
+```
+Step 6: Deploy the script to the Goerli testnet by running:
+```
+npx hardhat run --network goerli scripts/mint.js
+```
+Step 4: Deploy the script to the Goerli testnet by running:
+```
+npx hardhat run --network goerli scripts/Approve_deposit.js
+```
+Step 4: Deploy the script to the Mumbai testnet by running:
+```
+npx hardhat run --network mumbai scripts/Get_Balance.js
 ```
 
 ## Key Points
