@@ -15,7 +15,6 @@ async function main() {
   // Log the contract address
   console.log("NFT contract deployed to:", nft.address);
 
-  
 
 }
 
